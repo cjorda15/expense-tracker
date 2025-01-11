@@ -1,0 +1,24 @@
+<div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3 dark:text-green text-black" *ngFor="let header of headers" (click)="onSort(header.key)">
+                    {{ header.label }} <span *ngIf="header.sortable"> 🔽 </span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" *ngFor="let row of rows">
+                <td class="px-6 py-4 dark:text-green text-black" *ngFor="let header of headers">
+                    <ng-container [ngSwitch]="row['columns'][header.key]?.type">
+                        <span *ngSwitchCase="'text'">{{ row['columns'][header.key]?.content }}</span>
+                        <span *ngSwitchCase="'number'">{{ row['columns'][header.key]?.content }}</span>
+                        <input *ngSwitchCase="'input'" [value]="row['columns'][header.key]?.content" />
+                        <span *ngSwitchCase="'date'">{{ row['columns'][header.key]?.content |date }}</span>
+                        <span *ngSwitchDefault>{{ row['columns'][header.key]?.content }}</span>
+                    </ng-container>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,24 @@
+<button [type]="type" [ngClass]="[
+    'm-1 
+    gap-2
+    border
+    border-solid 
+    inline-flex 
+    items-center 
+    justify-center 
+    transition 
+    focus:outline-none 
+    focus:none
+    hover:translate-x-[-3px] 
+    hover:translate-y-[-3px]
+    transition-all 
+    duration-300
+    p-4 
+    font-mono 
+    rounded',
+    getSizeClass(),
+    getVariantClass(),
+    customClass
+  ]" [disabled]="disabled">
+  <ng-content></ng-content>
+</button>
