@@ -1,0 +1,16 @@
+<div class="block w-full relative py-2">
+  <label *ngIf="label"
+    class="text-black dark:text-green block mb-2 text-sm capitalize font-mono text-gray-600 w-full">{{ label }}</label>
+    <select [formControl]="control" [ngClass]="selectClass"
+      class="font-mono h-12 border border-gray-300 dark:border-green-300 text-gray dark:text-green text-base rounded-lg block w-full py-2.5 px-4
+      focus:outline-none dark:bg-navy bg:white appearance-none pr-10">
+    <option disabled selected>Choose an option</option>
+    <option *ngFor="let option of options" [value]="option.value">{{ option.content }}</option>
+  </select>
+  <svg xmlns="http://www.w3.org/2000/svg"
+    class="absolute dark:stroke-green right-4 top-[65%] transform -translate-y-1/2 pointer-events-none w-4 h-4
+    text-gray-400" fill="none"
+    viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+  </svg>
+</div>

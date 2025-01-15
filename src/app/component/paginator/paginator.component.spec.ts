@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EntryPanelComponent } from './entry-panel.component';
+import { PaginatorComponent } from './paginator.component';
 
-describe('EntryPanelComponent', () => {
-  let component: EntryPanelComponent;
-  let fixture: ComponentFixture<EntryPanelComponent>;
+describe('PaginatorComponent', () => {
+  let component: PaginatorComponent;
+  let fixture: ComponentFixture<PaginatorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EntryPanelComponent]
+      imports: [PaginatorComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EntryPanelComponent);
+    fixture = TestBed.createComponent(PaginatorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

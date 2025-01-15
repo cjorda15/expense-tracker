@@ -1,0 +1,39 @@
+<!-- initial state -->
+<ng-container *ngIf="!userReady();else loaded">
+  <app-button>
+    <svg xmlns=" http://www.w3.org/2000/svg " fill="none" viewBox=" 0 0 24 24 " stroke-width=" 1.5 " stroke="
+    currentColor " class=" size-6 ">
+      <path stroke-linecap=" round " stroke-linejoin=" round " d=" M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0
+    1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z " />
+    </svg>
+    <div class="flex space-x-2 align-center justify-center">
+      <div class=" bg-gray-700 rounded-full opacity-20 animate-fade" style="animation-delay: 0s;">.</div>
+      <div class=" bg-gray-700 rounded-full opacity-20 animate-fade" style="animation-delay: 0.3s;">.</div>
+      <div class=" bg-gray-700 rounded-full opacity-20 animate-fade" style="animation-delay: 0.6s;">.</div>
+    </div>
+  </app-button>
+</ng-container>
+<ng-template #loaded>
+  <!-- logged in -->
+  <ng-container *ngIf="isAuthenticated">
+    <app-button (click)=" auth.logout({ logoutParams: { returnTo: document.location.origin } }) ">
+      <svg xmlns=" http://www.w3.org/2000/svg " fill="none" viewBox=" 0 0 24 24 " stroke-width=" 1.5 " stroke="
+    currentColor " class=" size-6 ">
+        <path stroke-linecap=" round " stroke-linejoin=" round "
+          d=" M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0
+    1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z " />
+      </svg> logout
+    </app-button>
+  </ng-container>
+  <!-- logged out -->
+  <ng-container *ngIf="!isAuthenticated">
+    <app-button (click)=" auth.loginWithRedirect() ">
+      <svg xmlns=" http://www.w3.org/2000/svg " fill="none" viewBox=" 0 0 24 24 " stroke-width=" 1.5 " stroke="
+    currentColor " class=" size-6 ">
+        <path stroke-linecap=" round " stroke-linejoin=" round "
+          d=" M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0
+    1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z " />
+      </svg> login
+    </app-button>
+  </ng-container>
+</ng-template>

@@ -6,6 +6,10 @@
     src: url("./fonts/SFMono/SFMono-Medium.woff") format("woff2");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
     height: 100%;
@@ -37,4 +41,13 @@ body {
     --blue: #57cbff;
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
     --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+.overlay-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }

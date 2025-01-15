@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ThemeService {
   private darkModeKey = 'dark-mode';
+  public isDarkMode$: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   toggleDarkMode(): void {
     const isDark = this.isDarkMode();
@@ -20,6 +22,7 @@ export class ThemeService {
     } else {
       htmlElement.classList.remove('dark');
     }
+    this.isDarkMode$.next(isDark);
   }
 
   isDarkMode(): boolean {

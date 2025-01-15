@@ -1,0 +1,20 @@
+<app-modal [title]="'New Transaction'" class="max-w-[600px]">
+  <div class="flex flex-wrap gap-4">
+    <app-dropdown-input class="flex-1 min-w-[180px]" label="Type" selectClass="capitalize" [options]="typeOptions"
+      [control]="typeControl">
+    </app-dropdown-input>
+    <app-dropdown-input class="flex-1 min-w-[180px]" label="Category" selectClass="capitalize"
+      [options]="categoriesOptions"
+      [control]="categoryControl"></app-dropdown-input>
+  </div>
+  <div class="flex flex-wrap gap-4">
+    <app-input type="number" class="flex-1 min-w-[180px]" prependContent="$" label="Amount" [control]="amountControl">
+    </app-input>
+    <app-date-input class="flex-1 min-w-[180px]" label="Date" [control]="dateControl"></app-date-input>
+  </div>
+  <app-input label="Description" [control]="descriptionControl"></app-input>
+<div class="flex justify-between py-4">
+  <app-button (click)="close()">cancel</app-button>
+  <app-button [disabled]="!form.valid|| isSubmitting" [processing]="isSubmitting" (click)="submit()">submit</app-button>
+</div>
+</app-modal>

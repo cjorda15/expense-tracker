@@ -11,14 +11,20 @@
     focus:none
     hover:translate-x-[-3px] 
     hover:translate-y-[-3px]
-    transition-all 
     duration-300
     p-4 
     font-mono 
     rounded',
     getSizeClass(),
     getVariantClass(),
-    customClass
+    customClass, processing? 'translate-x-[-3px] translate-y-[-3px] shadow-[3px_3px_0_0_var(--navy)]
+    dark:shadow-[3px_3px_0_0_var(--green)]':'', disabled ? 'opacity-50 cursor-not-allowed ' : ''
+
   ]" [disabled]="disabled">
+  <svg *ngIf="processing" class="animate-spin h-5 w-5 text-blue-500" xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0116 0h-4a4 4 0 00-8 0H4z"></path>
+  </svg>
   <ng-content></ng-content>
 </button>

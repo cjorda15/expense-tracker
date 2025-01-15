@@ -1,36 +1,43 @@
-import { Component, Input } from '@angular/core';
-import { NavbarComponent } from '../../component/navbar/navbar.component';
-import { EntryPanelComponent } from './component/entry-panel/entry-panel.component';
-import { TableComponent } from '../../component/table/table.component';
-import { TableHeader, TableRow } from '../../types';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  inject
+} from '@angular/core';
+import { BarChartComponent } from '@component/bar-chart/bar-chart.component';
+import { LineChartComponent } from '@component/line-chart/line-chart.component';
+import { NavbarComponent } from '@component/navbar/navbar.component';
+import { SearchInputComponent } from '@component/search-input/search-input.component';
+import { TableTransactionComponent } from '@component/table-transaction/table-transaction.component';
+import { TransactionStore } from '@store/transaction';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   imports: [
-    EntryPanelComponent,
+    TableTransactionComponent,
     NavbarComponent,
-    TableComponent
+    // BarChartComponent,
+    
+    LineChartComponent
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
-  public  tableHeaders: TableHeader[] = [
-    { key: 'name', label: 'Name', sortable: true },
-    { key: 'email', label: 'Email', sortable: false },
-    { key: 'age', label: 'Age', sortable: true },
-    { key: 'joinedDate', label: 'Joined Date', sortable: true },
-  ];
-  
-  public tableRows:TableRow[] =[ {
-    data:null,
-    columns: {
-      name: { content: 'Alice', type: 'text' },
-      age: { content: 25, type: 'number' },
-      email: { content: 'crobertjordan@hao.c', type: 'text' },
-      joinedDate: { content: '2025-01-07T14:30:00', type: 'date' },
+  private transactionStore = inject(TransactionStore);
 
-    },
-  }];
+  barChartData = [
+    { name: 'A', value: 30 },
+    { name: 'B', value: 80 },
+    { name: 'C', value: 45 },
+    { name: 'D', value: 60 },
+    { name: 'E', value: 20 },
+    { name: 'F', value: 90 },
+    { name: 'G', value: 55 }
+  ];
+
+  get transactions() {
+    return computed(() => this.transactionStore.transactions());
+  }
 }

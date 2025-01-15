@@ -1,5 +1,8 @@
 <app-navbar></app-navbar>
-<div class="bg-white dark:bg-black;">
-    <app-entry-panel></app-entry-panel>
-    <app-table [headers]="tableHeaders" [rows]="tableRows"></app-table>
+<div class="bg-white dark:bg-navy">
+    <app-table-transaction></app-table-transaction>
+    <!-- <app-bar-chart [data]="barChartData" [width]="600" [height]="400">
+    </app-bar-chart> -->
+    <app-line-chart [transactions]="transactions()"></app-line-chart>
+
 </div>

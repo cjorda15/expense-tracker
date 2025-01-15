@@ -1,0 +1,12 @@
+:host {
+  #line-chart {
+    font-family: Arial, sans-serif;
+  }
+
+  path {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+}

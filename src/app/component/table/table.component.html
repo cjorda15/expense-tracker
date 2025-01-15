@@ -1,24 +1,42 @@
+<!-- table -->
+<app-paginator [totalItems]="97" [pageSize]="10" [currentPage]="page" (pageChange)="pageChange($event)">
+</app-paginator>
+<app-search-input></app-search-input>
 <div class="relative overflow-x-auto">
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-                <th scope="col" class="px-6 py-3 dark:text-green text-black" *ngFor="let header of headers" (click)="onSort(header.key)">
-                    {{ header.label }} <span *ngIf="header.sortable"> 🔽 </span>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" *ngFor="let row of rows">
-                <td class="px-6 py-4 dark:text-green text-black" *ngFor="let header of headers">
-                    <ng-container [ngSwitch]="row['columns'][header.key]?.type">
-                        <span *ngSwitchCase="'text'">{{ row['columns'][header.key]?.content }}</span>
-                        <span *ngSwitchCase="'number'">{{ row['columns'][header.key]?.content }}</span>
-                        <input *ngSwitchCase="'input'" [value]="row['columns'][header.key]?.content" />
-                        <span *ngSwitchCase="'date'">{{ row['columns'][header.key]?.content |date }}</span>
-                        <span *ngSwitchDefault>{{ row['columns'][header.key]?.content }}</span>
-                    </ng-container>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+  <table
+    class="table-fixed bg-white dark:bg-navy w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+    [ngClass]="class">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <tr>
+        <th [style.cursor]="header.sortable ? 'pointer' : 'default'" scope="col" *ngFor="let header of headers"
+          (click)="handleSort($event, header)">
+          <div class="px-6 py-3 flex items-center gap-1">
+            <p class="dark:text-green text-black font-mono"> {{ header.label }}</p>
+            <span *ngIf="sortState.header === header.key">
+              <div (click)="handleToggleSort()" class="cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                  stroke="currentColor" [class.rotate-180]="!sortState.sortAsc"
+                  class="size-4 transform transition-transform duration-300">
+                  <path class="dark:text-green text-black" stroke-linecap="round" stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </div>
+            </span>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b dark:border-green dark:border-green-700" *ngFor="let row of paginatedRows">
+        <td class="font-mono px-6 py-2 dark:text-green text-black" *ngFor="let header of headers"
+          [ngClass]="row['columns'][header.key].class">
+          <ng-container [ngSwitch]="row['columns'][header.key].type">
+            <div *ngSwitchCase="'number'">{{ row['columns'][header.key].content | number }} </div>
+            <div *ngSwitchCase="'date'">{{ row['columns'][header.key].content | date }} </div>
+            <div *ngSwitchDefault>{{ row['columns'][header.key].content }}</div>
+          </ng-container>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

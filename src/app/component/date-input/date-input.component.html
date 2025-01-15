@@ -1,0 +1,10 @@
+<div class="block w-full relative py-2">
+  <!-- label -->
+  <label *ngIf="label"
+    class="text-black dark:text-green block mb-2 text-sm capitalize font-mono text-gray-600 w-full"> {{label}}
+  </label>
+  <!--input-->
+  <input #inputField (click)="focusInput()" class="font-mono appearance-none h-12 border border-gray-300 dark:border-green-300 text-gray dark:text-green
+    text-base rounded-lg block w-full py-2.5 px-4 pr-12
+    focus:outline-none dark:bg-navy bg:white" [formControl]="control" type="date" [min]="min" [max]="max" />
+</div>
