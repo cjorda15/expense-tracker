@@ -7,7 +7,6 @@ import {
 import { BarChartComponent } from '@component/bar-chart/bar-chart.component';
 import { LineChartComponent } from '@component/line-chart/line-chart.component';
 import { NavbarComponent } from '@component/navbar/navbar.component';
-import { SearchInputComponent } from '@component/search-input/search-input.component';
 import { TableTransactionComponent } from '@component/table-transaction/table-transaction.component';
 import { TransactionStore } from '@store/transaction';
 
@@ -16,8 +15,8 @@ import { TransactionStore } from '@store/transaction';
   imports: [
     TableTransactionComponent,
     NavbarComponent,
-    // BarChartComponent,
-    
+    BarChartComponent,
+
     LineChartComponent
   ],
   templateUrl: './home.component.html',

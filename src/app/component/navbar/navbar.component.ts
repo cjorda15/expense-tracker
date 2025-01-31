@@ -5,7 +5,7 @@ import { ButtonThemeToggleComponent } from '../button-theme-toggle/button-theme-
 
 @Component({
   selector: 'app-navbar',
-  imports: [ButtonThemeToggleComponent, ButtonAuthComponent, CommonModule],
+  imports: [ButtonThemeToggleComponent, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush

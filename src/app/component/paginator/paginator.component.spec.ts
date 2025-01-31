@@ -9,8 +9,7 @@ describe('PaginatorComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [PaginatorComponent]
-    })
-    .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PaginatorComponent);
     component = fixture.componentInstance;

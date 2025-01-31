@@ -10,7 +10,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 // }
 
 @Pipe({
-  name: 'math',
+  name: 'math'
 })
 export class MathPipe implements PipeTransform {
   transform(value: number, operation: string, operand: number): number {

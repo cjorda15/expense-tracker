@@ -1,8 +1,12 @@
 <app-navbar></app-navbar>
-<div class="bg-white dark:bg-navy">
-    <app-table-transaction></app-table-transaction>
-    <!-- <app-bar-chart [data]="barChartData" [width]="600" [height]="400">
-    </app-bar-chart> -->
-    <app-line-chart [transactions]="transactions()"></app-line-chart>
-
-</div>
+<div class="bg-white dark:bg-navy" class="px-[30px]">
+  <app-table-transaction></app-table-transaction>
+  <div class="flex 2xl:flex-row flex-col gap-4">
+    <div class="flex-1 min-w-[300px]">
+      <app-line-chart [transactions]="transactions()"></app-line-chart>
+    </div>
+    <div class="flex-1 min-w-[300px]">
+      <app-bar-chart [transactions]="transactions()" [period]="'month'"></app-bar-chart>
+    </div>
+  </div>
+  </div>

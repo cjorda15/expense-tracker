@@ -25,7 +25,9 @@ export const TransactionStore = signalStore(
     },
 
     addTransaction(transaction: Transaction) {
+      debugger
       patchState(store, {
+        
         transactions: [transaction, ...store.transactions()],
         state: 'ready'
       });

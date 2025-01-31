@@ -438,5 +438,821 @@ export const mockTransactions = [
     category: 'refund',
     description: 'Mock income for refund',
     amount: 2260.92
+  },
+  {
+    id: 56,
+    date: '2024-01-08',
+    type: 'income',
+    category: 'refund',
+    description: 'Mock income for refund',
+    amount: 1260.92
+  },
+  {
+    id: 57,
+    date: '2024-03-22',
+    type: 'expense',
+    category: 'dining out',
+    description: 'Mock expense for dining out',
+    amount: 175.63
+  },
+  {
+    id: 58,
+    date: '2024-08-19',
+    type: 'income',
+    category: 'freelance',
+    description: 'Mock income for freelance',
+    amount: 1320.78
+  },
+  {
+    id: 59,
+    date: '2024-04-17',
+    type: 'expense',
+    category: 'insurance',
+    description: 'Mock expense for insurance',
+    amount: 115.45
+  },
+  {
+    id: 60,
+    date: '2024-05-02',
+    type: 'expense',
+    category: 'shopping',
+    description: 'Mock expense for shopping',
+    amount: 89.92
+  },
+  {
+    id: 61,
+    date: '2024-06-15',
+    type: 'income',
+    category: 'bonus',
+    description: 'Mock income for bonus',
+    amount: 3200.45
+  },
+  {
+    id: 62,
+    date: '2024-07-20',
+    type: 'expense',
+    category: 'groceries',
+    description: 'Mock expense for groceries',
+    amount: 85.75
+  },
+  {
+    id: 63,
+    date: '2024-08-10',
+    type: 'expense',
+    category: 'healthcare',
+    description: 'Mock expense for healthcare',
+    amount: 213.68
+  },
+  {
+    id: 64,
+    date: '2024-09-13',
+    type: 'expense',
+    category: 'housing',
+    description: 'Mock expense for housing',
+    amount: 301.56
+  },
+  {
+    id: 65,
+    date: '2024-10-09',
+    type: 'expense',
+    category: 'charity',
+    description: 'Mock expense for charity',
+    amount: 150.48
+  },
+  {
+    id: 66,
+    date: '2024-11-05',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 98.35
+  },
+  {
+    id: 67,
+    date: '2024-02-24',
+    type: 'income',
+    category: 'salary',
+    description: 'Mock income for salary',
+    amount: 2950.85
+  },
+  {
+    id: 68,
+    date: '2024-03-28',
+    type: 'expense',
+    category: 'dining out',
+    description: 'Mock expense for dining out',
+    amount: 120.58
+  },
+  {
+    id: 69,
+    date: '2024-05-16',
+    type: 'income',
+    category: 'freelance',
+    description: 'Mock income for freelance',
+    amount: 1800.25
+  },
+  {
+    id: 70,
+    date: '2024-04-11',
+    type: 'expense',
+    category: 'miscellaneous',
+    description: 'Mock expense for miscellaneous',
+    amount: 76.72
+  },
+  {
+    id: 71,
+    date: '2024-06-30',
+    type: 'income',
+    category: 'bonus',
+    description: 'Mock income for bonus',
+    amount: 2100.54
+  },
+  {
+    id: 72,
+    date: '2024-07-10',
+    type: 'expense',
+    category: 'shopping',
+    description: 'Mock expense for shopping',
+    amount: 322.67
+  },
+  {
+    id: 73,
+    date: '2024-10-16',
+    type: 'income',
+    category: 'freelance',
+    description: 'Mock income for freelance',
+    amount: 2950.85
+  },
+  {
+    id: 74,
+    date: '2024-11-07',
+    type: 'expense',
+    category: 'gifts',
+    description: 'Mock expense for gifts',
+    amount: 120.22
+  },
+  {
+    id: 75,
+    date: '2024-08-13',
+    type: 'expense',
+    category: 'housing',
+    description: 'Mock expense for housing',
+    amount: 110.68
+  },
+  {
+    id: 76,
+    date: '2024-09-02',
+    type: 'income',
+    category: 'salary',
+    description: 'Mock income for salary',
+    amount: 3800.78
+  },
+  {
+    id: 77,
+    date: '2024-10-18',
+    type: 'expense',
+    category: 'entertainment',
+    description: 'Mock expense for entertainment',
+    amount: 100.24
+  },
+  {
+    id: 78,
+    date: '2024-05-05',
+    type: 'expense',
+    category: 'charity',
+    description: 'Mock expense for charity',
+    amount: 80.33
+  },
+  {
+    id: 79,
+    date: '2024-02-04',
+    type: 'income',
+    category: 'rental income',
+    description: 'Mock income for rental income',
+    amount: 1250.48
+  },
+  {
+    id: 80,
+    date: '2024-03-13',
+    type: 'expense',
+    category: 'groceries',
+    description: 'Mock expense for groceries',
+    amount: 72.14
+  },
+  {
+    id: 81,
+    date: '2024-04-14',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 121.99
+  },
+  {
+    id: 82,
+    date: '2024-06-19',
+    type: 'income',
+    category: 'freelance',
+    description: 'Mock income for freelance',
+    amount: 2300.75
+  },
+  {
+    id: 83,
+    date: '2024-07-22',
+    type: 'expense',
+    category: 'education',
+    description: 'Mock expense for education',
+    amount: 200.4
+  },
+  {
+    id: 84,
+    date: '2024-08-14',
+    type: 'expense',
+    category: 'miscellaneous',
+    description: 'Mock expense for miscellaneous',
+    amount: 89.9
+  },
+  {
+    id: 85,
+    date: '2024-09-30',
+    type: 'expense',
+    category: 'housing',
+    description: 'Mock expense for housing',
+    amount: 512.63
+  },
+  {
+    id: 86,
+    date: '2024-11-12',
+    type: 'expense',
+    category: 'entertainment',
+    description: 'Mock expense for entertainment',
+    amount: 217.04
+  },
+  {
+    id: 87,
+    date: '2024-06-18',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 104.56
+  },
+  {
+    id: 88,
+    date: '2024-07-27',
+    type: 'income',
+    category: 'salary',
+    description: 'Mock income for salary',
+    amount: 2900.35
+  },
+  {
+    id: 89,
+    date: '2024-08-22',
+    type: 'income',
+    category: 'freelance',
+    description: 'Mock income for freelance',
+    amount: 2150.66
+  },
+  {
+    id: 90,
+    date: '2024-09-26',
+    type: 'expense',
+    category: 'insurance',
+    description: 'Mock expense for insurance',
+    amount: 211.23
+  },
+  {
+    id: 91,
+    date: '2024-02-18',
+    type: 'expense',
+    category: 'gifts',
+    description: 'Mock expense for gifts',
+    amount: 61.72
+  },
+  {
+    id: 92,
+    date: '2024-04-26',
+    type: 'income',
+    category: 'salary',
+    description: 'Mock income for salary',
+    amount: 3350.52
+  },
+  {
+    id: 93,
+    date: '2024-05-28',
+    type: 'expense',
+    category: 'healthcare',
+    description: 'Mock expense for healthcare',
+    amount: 150.99
+  },
+  {
+    id: 94,
+    date: '2024-07-09',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 58.11
+  },
+  {
+    id: 95,
+    date: '2024-08-01',
+    type: 'expense',
+    category: 'groceries',
+    description: 'Mock expense for groceries',
+    amount: 91.67
+  },
+  {
+    id: 96,
+    date: '2024-09-05',
+    type: 'income',
+    category: 'freelance',
+    description: 'Mock income for freelance',
+    amount: 1750.15
+  },
+  {
+    id: 97,
+    date: '2024-10-13',
+    type: 'expense',
+    category: 'education',
+    description: 'Mock expense for education',
+    amount: 400.12
+  },
+  {
+    id: 98,
+    date: '2024-11-29',
+    type: 'income',
+    category: 'salary',
+    description: 'Mock income for salary',
+    amount: 3589.29
+  },
+  {
+    id: 99,
+    date: '2024-03-14',
+    type: 'expense',
+    category: 'dining out',
+    description: 'Mock expense for dining out',
+    amount: 137.94
+  },
+  {
+    id: 100,
+    date: '2024-07-16',
+    type: 'income',
+    category: 'bonus',
+    description: 'Mock income for bonus',
+    amount: 2800.11
+  },
+  {
+    id: 101,
+    date: '2024-06-03',
+    type: 'expense',
+    category: 'housing',
+    description: 'Mock expense for housing',
+    amount: 440.89
+  },
+  {
+    id: 102,
+    date: '2024-07-04',
+    type: 'income',
+    category: 'freelance',
+    description: 'Mock income for freelance',
+    amount: 1200.88
+  },
+  {
+    id: 103,
+    date: '2024-10-20',
+    type: 'expense',
+    category: 'shopping',
+    description: 'Mock expense for shopping',
+    amount: 240.76
+  },
+  {
+    id: 104,
+    date: '2024-09-01',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 99.47
+  },
+  {
+    id: 105,
+    date: '2024-06-13',
+    type: 'income',
+    category: 'salary',
+    description: 'Mock income for salary',
+    amount: 3450.12
+  },
+  {
+    id: 106,
+    date: '2024-08-03',
+    type: 'expense',
+    category: 'insurance',
+    description: 'Mock expense for insurance',
+    amount: 92.78
+  },
+  {
+    id: 107,
+    date: '2024-12-01',
+    type: 'expense',
+    category: 'shopping',
+    description: 'Mock expense for shopping',
+    amount: 155.42
+  },
+  {
+    id: 108,
+    date: '2024-05-25',
+    type: 'income',
+    category: 'freelance',
+    description: 'Mock income for freelance',
+    amount: 2100.99
+  },
+  {
+    id: 109,
+    date: '2024-07-19',
+    type: 'expense',
+    category: 'housing',
+    description: 'Mock expense for housing',
+    amount: 185.14
+  },
+  {
+    id: 110,
+    date: '2024-04-30',
+    type: 'income',
+    category: 'salary',
+    description: 'Mock income for salary',
+    amount: 2900.88
+  },
+  {
+    id: 111,
+    date: '2024-11-04',
+    type: 'expense',
+    category: 'entertainment',
+    description: 'Mock expense for entertainment',
+    amount: 250.56
+  },
+  {
+    id: 112,
+    date: '2024-05-06',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 48.9
+  },
+  {
+    id: 113,
+    date: '2024-09-08',
+    type: 'expense',
+    category: 'healthcare',
+    description: 'Mock expense for healthcare',
+    amount: 320.15
+  },
+  {
+    id: 114,
+    date: '2024-06-02',
+    type: 'income',
+    category: 'bonus',
+    description: 'Mock income for bonus',
+    amount: 3050.48
+  },
+  {
+    id: 115,
+    date: '2024-08-16',
+    type: 'income',
+    category: 'salary',
+    description: 'Mock income for salary',
+    amount: 3800.35
+  },
+  {
+    id: 116,
+    date: '2024-07-05',
+    type: 'expense',
+    category: 'groceries',
+    description: 'Mock expense for groceries',
+    amount: 124.66
+  },
+  {
+    id: 117,
+    date: '2024-12-02',
+    type: 'income',
+    category: 'refund',
+    description: 'Mock income for refund',
+    amount: 1800.25
+  },
+  {
+    id: 119,
+    date: '2024-10-27',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 132.4
+  },
+  {
+    id: 120,
+    date: '2024-12-11',
+    type: 'expense',
+    category: 'utilities',
+    description: 'Mock expense for utilities',
+    amount: 256.72
+  },
+  {
+    id: 121,
+    date: '2024-09-12',
+    type: 'expense',
+    category: 'housing',
+    description: 'Mock expense for housing',
+    amount: 340.56
+  },
+  {
+    id: 122,
+    date: '2024-07-30',
+    type: 'expense',
+    category: 'groceries',
+    description: 'Mock expense for groceries',
+    amount: 213.85
+  },
+  {
+    id: 123,
+    date: '2024-08-21',
+    type: 'expense',
+    category: 'shopping',
+    description: 'Mock expense for shopping',
+    amount: 98.65
+  },
+  {
+    id: 124,
+    date: '2024-11-25',
+    type: 'expense',
+    category: 'insurance',
+    description: 'Mock expense for insurance',
+    amount: 88.41
+  },
+  {
+    id: 125,
+    date: '2024-05-18',
+    type: 'expense',
+    category: 'gifts',
+    description: 'Mock expense for gifts',
+    amount: 127.45
+  },
+  {
+    id: 126,
+    date: '2024-06-16',
+    type: 'expense',
+    category: 'education',
+    description: 'Mock expense for education',
+    amount: 542.31
+  },
+  {
+    id: 127,
+    date: '2024-03-21',
+    type: 'expense',
+    category: 'healthcare',
+    description: 'Mock expense for healthcare',
+    amount: 342.68
+  },
+  {
+    id: 128,
+    date: '2024-07-21',
+    type: 'expense',
+    category: 'housing',
+    description: 'Mock expense for housing',
+    amount: 525.14
+  },
+  {
+    id: 129,
+    date: '2024-09-04',
+    type: 'expense',
+    category: 'dining out',
+    description: 'Mock expense for dining out',
+    amount: 194.22
+  },
+  {
+    id: 130,
+    date: '2024-08-10',
+    type: 'expense',
+    category: 'utilities',
+    description: 'Mock expense for utilities',
+    amount: 112.35
+  },
+  {
+    id: 131,
+    date: '2024-11-10',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 250.46
+  },
+  {
+    id: 132,
+    date: '2024-10-17',
+    type: 'expense',
+    category: 'entertainment',
+    description: 'Mock expense for entertainment',
+    amount: 57.18
+  },
+  {
+    id: 133,
+    date: '2024-06-28',
+    type: 'expense',
+    category: 'housing',
+    description: 'Mock expense for housing',
+    amount: 490.14
+  },
+  {
+    id: 134,
+    date: '2024-05-13',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 123.75
+  },
+  {
+    id: 135,
+    date: '2024-08-18',
+    type: 'expense',
+    category: 'charity',
+    description: 'Mock expense for charity',
+    amount: 248.16
+  },
+  {
+    id: 136,
+    date: '2024-09-18',
+    type: 'expense',
+    category: 'shopping',
+    description: 'Mock expense for shopping',
+    amount: 132.04
+  },
+  {
+    id: 137,
+    date: '2024-07-03',
+    type: 'expense',
+    category: 'groceries',
+    description: 'Mock expense for groceries',
+    amount: 74.63
+  },
+  {
+    id: 138,
+    date: '2024-11-18',
+    type: 'expense',
+    category: 'miscellaneous',
+    description: 'Mock expense for miscellaneous',
+    amount: 52.97
+  },
+  {
+    id: 139,
+    date: '2024-10-12',
+    type: 'expense',
+    category: 'insurance',
+    description: 'Mock expense for insurance',
+    amount: 205.47
+  },
+  {
+    id: 140,
+    date: '2024-04-21',
+    type: 'expense',
+    category: 'debt payment',
+    description: 'Mock expense for debt payment',
+    amount: 124.76
+  },
+  {
+    id: 141,
+    date: '2024-09-06',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 172.82
+  },
+  {
+    id: 142,
+    date: '2024-06-07',
+    type: 'expense',
+    category: 'shopping',
+    description: 'Mock expense for shopping',
+    amount: 65.43
+  },
+  {
+    id: 143,
+    date: '2024-08-07',
+    type: 'expense',
+    category: 'groceries',
+    description: 'Mock expense for groceries',
+    amount: 128.54
+  },
+  {
+    id: 144,
+    date: '2024-07-18',
+    type: 'expense',
+    category: 'charity',
+    description: 'Mock expense for charity',
+    amount: 79.36
+  },
+  {
+    id: 145,
+    date: '2024-09-22',
+    type: 'expense',
+    category: 'dining out',
+    description: 'Mock expense for dining out',
+    amount: 216.49
+  },
+  {
+    id: 146,
+    date: '2024-11-29',
+    type: 'expense',
+    category: 'insurance',
+    description: 'Mock expense for insurance',
+    amount: 194.63
+  },
+  {
+    id: 147,
+    date: '2024-05-22',
+    type: 'expense',
+    category: 'shopping',
+    description: 'Mock expense for shopping',
+    amount: 88.79
+  },
+  {
+    id: 148,
+    date: '2024-04-16',
+    type: 'expense',
+    category: 'utilities',
+    description: 'Mock expense for utilities',
+    amount: 278.59
+  },
+  {
+    id: 149,
+    date: '2024-12-04',
+    type: 'expense',
+    category: 'housing',
+    description: 'Mock expense for housing',
+    amount: 418.26
+  },
+  {
+    id: 150,
+    date: '2024-06-22',
+    type: 'expense',
+    category: 'healthcare',
+    description: 'Mock expense for healthcare',
+    amount: 97.82
+  },
+  {
+    id: 151,
+    date: '2024-07-24',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 66.14
+  },
+  {
+    id: 152,
+    date: '2024-09-17',
+    type: 'expense',
+    category: 'charity',
+    description: 'Mock expense for charity',
+    amount: 185.75
+  },
+  {
+    id: 153,
+    date: '2024-08-25',
+    type: 'expense',
+    category: 'gifts',
+    description: 'Mock expense for gifts',
+    amount: 111.25
+  },
+  {
+    id: 154,
+    date: '2024-04-08',
+    type: 'expense',
+    category: 'education',
+    description: 'Mock expense for education',
+    amount: 322.57
+  },
+  {
+    id: 155,
+    date: '2024-10-19',
+    type: 'expense',
+    category: 'transportation',
+    description: 'Mock expense for transportation',
+    amount: 58.23
+  },
+  {
+    id: 156,
+    date: '2024-11-21',
+    type: 'expense',
+    category: 'utilities',
+    description: 'Mock expense for utilities',
+    amount: 185.88
+  },
+  {
+    id: 157,
+    date: '2024-09-13',
+    type: 'expense',
+    category: 'groceries',
+    description: 'Mock expense for groceries',
+    amount: 120.47
+  },
+  {
+    id: 158,
+    date: '2024-07-14',
+    type: 'expense',
+    category: 'charity',
+    description: 'Mock expense for charity',
+    amount: 45.32
   }
 ];

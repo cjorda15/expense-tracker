@@ -1,0 +1,2 @@
+  <div class="text-sm font-mono dark:text-green text-black"> Showing {{ (currentPage - 1) * pageSize + 1 }} to
+    {{ currentPage * pageSize | math: 'min':totalItems }} of {{ totalItems }} results </div>
