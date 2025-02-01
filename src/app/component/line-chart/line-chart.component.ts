@@ -3,8 +3,8 @@ import {
   Input,
   OnInit,
   OnDestroy,
-  HostListener,
-  ChangeDetectionStrategy
+  ChangeDetectionStrategy,
+  AfterViewInit
 } from '@angular/core';
 import { ThemeService } from '@service/theme.service';
 import { Transaction, TransactionType } from '@store/transaction.model';
@@ -17,7 +17,7 @@ import { Subject, takeUntil, tap } from 'rxjs';
   styleUrls: ['./line-chart.component.css'],
   changeDetection:ChangeDetectionStrategy.OnPush
 })
-export class LineChartComponent implements OnInit, OnDestroy {
+export class LineChartComponent implements OnInit, OnDestroy, AfterViewInit {
   @Input() transactions: Transaction[] = [];
   private destroy$ = new Subject();
   private margin = { top: 20, right: 50, bottom: 40, left: 50 };
@@ -30,12 +30,20 @@ export class LineChartComponent implements OnInit, OnDestroy {
   constructor(private themeService: ThemeService) {}
 
   ngOnInit() {
-    this.updateDimensions();
-
-    if (this.transactions.length) {
+ if (this.transactions.length) {
       this.processedData = this.processData(this.transactions);
     }
+  }
 
+ ngOnChanges(changes:any): void {
+    if (changes?.transactions&&!changes?.transactions?.firstChange) {
+      this.createChart();
+    }
+  }
+
+
+  ngAfterViewInit(): void {
+    this.updateDimensions();
     this.themeService.isDarkMode$
       .pipe(
         takeUntil(this.destroy$),

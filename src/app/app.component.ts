@@ -19,6 +19,5 @@ export class AppComponent {
     @Inject(DOCUMENT) public document: Document
   ) {}
   ngOnInit(): void {
-    this.themeService.initializeTheme();
   }
 }

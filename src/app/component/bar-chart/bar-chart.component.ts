@@ -22,8 +22,11 @@ export class BarChartComponent implements OnInit, OnChanges {
   private isDarkMode!: boolean;
   constructor(private themeService: ThemeService) {}
   ngOnInit(): void {
+
+  }
+
+  ngAfterViewInit(){
     this.updateDimensions();
-    this.createChart();
     this.themeService.isDarkMode$
       .pipe(
         takeUntil(this.destroy$),
@@ -35,8 +38,8 @@ export class BarChartComponent implements OnInit, OnChanges {
       .subscribe();
     window.addEventListener('resize', this.onResize);
   }
-  ngOnChanges(): void {
-    if (this.transactions.length > 0) {
+  ngOnChanges(changes:any): void {
+    if (changes?.transactions&&!changes?.transactions?.firstChange) {
       this.createChart();
     }
   }
@@ -71,6 +74,7 @@ export class BarChartComponent implements OnInit, OnChanges {
     const textColor = this.isDarkMode ? '#64ffda' : '#000';
     const tooltipColorIncome = this.isDarkMode ? '#64ffda' : '#48bb78';
     const tooltipColorExpenses = this.isDarkMode ? '#ff0000' : '#e53e3e';
+    debugger
     d3.select('#bar-chart').selectAll('*').remove(); // Clear previous chart
 
     this.svg = d3

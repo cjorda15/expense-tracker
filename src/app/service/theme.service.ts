@@ -6,33 +6,37 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ThemeService {
   private darkModeKey = 'dark-mode';
-  public isDarkMode$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  public isDarkMode$: BehaviorSubject<boolean>;
+
+  constructor() {
+    // init theme from localStorage
+    const savedMode = this.getSavedTheme();
+    this.isDarkMode$ = new BehaviorSubject(savedMode);
+    this.applyTheme(savedMode);
+  }
 
   toggleDarkMode(): void {
-    const isDark = this.isDarkMode();
-    const newMode = !isDark;
+    const newMode = !this.isDarkMode$.value;
     this.setDarkMode(newMode);
   }
 
   setDarkMode(isDark: boolean): void {
     localStorage.setItem(this.darkModeKey, JSON.stringify(isDark));
+    this.applyTheme(isDark);
+    this.isDarkMode$.next(isDark);
+  }
+
+  private applyTheme(isDark: boolean): void {
     const htmlElement = document.documentElement;
     if (isDark) {
       htmlElement.classList.add('dark');
     } else {
       htmlElement.classList.remove('dark');
     }
-    this.isDarkMode$.next(isDark);
   }
 
-  isDarkMode(): boolean {
-    return document.documentElement.classList.contains('dark');
-  }
-
-  initializeTheme(): void {
+  private getSavedTheme(): boolean {
     const savedMode = localStorage.getItem(this.darkModeKey);
-    if (savedMode !== null) {
-      this.setDarkMode(JSON.parse(savedMode));
-    }
+    return savedMode !== null ? JSON.parse(savedMode) : false;
   }
 }
